@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Quiz - MCQ Assignment System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
+                            <h4 id="assignmentTitle">Loading...</h4>
+                            <p class="mb-0">Question <span id="currentQuestion">1</span> of <span id="totalQuestions">0</span></p>
+                        </div>
+                        <div class="card-body">
+                            <div id="questionContainer">
+                                <h5 id="questionText" class="mb-4"></h5>
+                                <div id="optionsContainer" class="mb-4">
+                                    <!-- Radio buttons will be inserted here -->
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between">
+                                <button class="btn btn-secondary" id="prevBtn" onclick="previousQuestion()" disabled>
+                                    <i class="fas fa-arrow-left"></i> Previous
+                                </button>
+                                <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()">
+                                    Next <i class="fas fa-arrow-right"></i>
+                                </button>
+                                <button class="btn btn-success" id="submitBtn" onclick="submitQuiz()" style="display: none;">
+                                    Submit Assignment
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Progress bar -->
+                    <div class="progress mt-3" style="height: 10px;">
+                        <div class="progress-bar" id="progressBar" role="progressbar" style="width: 0%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+:root {
+    --primary-color: #3498db;
+    --sidebar-color: #2c3e50;
+    --background-color: #f4f6f9;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Login Page Styles */
+.login-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-pills .nav-link.active {
+    background-color: var(--primary-color);
+}
+
+/* Dashboard Layout */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: var(--sidebar-color);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+    transition: all 0.3s;
+}
+
+.sidebar-header {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar-menu {
+    flex: 1;
+    padding: 20px 0;
+}
+
+.menu-item {
+    display: block;
+    padding: 12px 20px;
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    transition: all 0.3s;
+    margin: 5px 10px;
+    border-radius: 8px;
+}
+
+.menu-item:hover,
+.menu-item.active {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateX(5px);
+}
+
+.menu-item i {
+    margin-right: 10px;
+    width: 20px;
+}
+
+.sidebar-footer {
+    padding: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.9rem;
+}
+
+.main-content {
+    flex: 1;
+    margin-left: 250px;
+    padding: 30px;
+    background-color: var(--background-color);
+}
+
+/* Stats Cards */
+.stats-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px;
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.stats-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.stats-icon i {
+    font-size: 24px;
+    color: white;
+}
+
+.stats-details h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.stats-details p {
+    margin: 0;
+    color: #6c757d;
+}
+
+/* Table Styles */
+.table {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.table thead {
+    background: var(--primary-color);
+    color: white;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(52, 152, 219, 0.1);
+    transform: scale(1.01);
+    transition: all 0.2s;
+}
+
+/* Button Styles */
+.btn {
+    border-radius: 8px;
+    padding: 8px 20px;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+}
+
+/* Quiz Page Styles */
+.quiz-container {
+    padding: 50px 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.quiz-container .card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.quiz-container .card-header {
+    border-radius: 15px 15px 0 0 !important;
+    padding: 20px;
+}
+
+.quiz-container .card-header h4 {
+    margin-bottom: 5px;
+}
+
+/* Option Cards */
+.option-card {
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    background: white;
+}
+
+.option-card:hover {
+    border-color: var(--primary-color);
+    background-color: rgba(52, 152, 219, 0.05);
+    transform: translateX(5px);
+}
+
+.option-card.selected {
+    border-color: var(--primary-color);
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+/* Progress Bar */
+.progress {
+    background-color: #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+/* Result Page */
+.result-card {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.score-circle {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 70px;
+        overflow: hidden;
+    }
+    
+    .sidebar:hover {
+        width: 250px;
+    }
+    
+    .sidebar .menu-item span {
+        display: none;
+    }
+    
+    .sidebar:hover .menu-item span {
+        display: inline;
+    }
+    
+    .main-content {
+        margin-left: 70px;
+    }
+    
+    .stats-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .stats-icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* Loading Spinner */
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Alert Messages */
+.alert {
+    border-radius: 10px;
+    border: none;
+    animation: slideIn 0.3s ease;
+}
+
+/* Form Controls */
+.form-control, .form-select {
+    border-radius: 8px;
+    border: 2px solid #e9ecef;
+    padding: 10px 15px;
+    transition: all 0.3s;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
